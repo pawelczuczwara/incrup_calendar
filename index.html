@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Porfolio Pawel Czuczwara</title>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+    <!--  <link rel="stylesheet" href="css/style.css">  -->
+    <link rel="stylesheet" href="css/timeline.css">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script> -->
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <!-- <p class="header__button">☰</p> -->
+
+        <!-- <img class="header__logo" src="img/udacity_logo.png" alt="logo"> -->
+        <h1 class="header__title">Incrup Calendar</h1>
+        <p class="header__desc">Google Cloud Support</p>
+    </header>
+
+    <nav id="panel" class="nav">
+        <ul class="nav__list">
+          <!-- TODO: additional pages Coding, Photo, GIS Maps. -->
+            <script class='menu_template' type='text/x-handlebars-template'>
+                <li class="nav__item">
+                    <a href='{{url}}' target='{{target}}'>{{name}}</a>
+                </li>
+            </script>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Projects section -->
+        <div class="page_t">
+            <div class="timeline">
+                <div class="timeline__group">
+                    <span class="timeline_year_put"></span>
+                    <span class="timeline_put"></span>
+                   
+                    <script class='today_template' type='text/x-handlebars-template'>
+                    <div class="timeline__year">Today: {{date_today}}</div>
+                    </script>
+
+                    <script class='day_template' type='text/x-handlebars-template'>
+                    <div class="timeline__box">
+                        <div class="timeline__date">
+                          <span class="timeline__day">+{{date_plus}}</span>
+                          <span class="timeline__month">{{date_plus_days}}</span>
+                        </div>
+                        <div class="timeline__post">
+                            <div class="timeline__content">
+                                <span id="i{{date_plus}}" class="t1">Incrup in {{date_plus}} {{date_plus_days}}, on: {{date_full}} before 19:00 CET</span>
+                                <button class="b1" >Copy</button>
+                                <span id="is{{date_plus}}" class="t1">INCRUP: {{date_short}}</span>
+                                <hr>
+                                <span id="c{{date_plus}}" class="t1">Planning to close the case in {{date_plus}} {{date_plus_days}}, on: {{date_full}}</span>
+                                <button class="b1" >Copy</button>
+                                <span id="cs{{date_plus}}" class="t1">CLOSE: {{date_short}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <p class='wait'>Page is loading. Plase wait.</p>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <!-- Footer and XXX:XXX for javascript -->
+        <p><span class='view__size'>XXX:XXX</span><span id="about">, author: Pawel Czuczwara</span></p>
+        <!--  <img class="footer__img" src="img/p_mua.jpg" alt="Mua">
+        <p class="footer__about">... ...</p>-->
+    </footer>
+</div>
+<script src="scr/loader.js"></script>
+<!-- <script src="scr/handlebars.min.js"></script> -->
+<!-- <script src="scr/content.js"></script> -->
+<!-- <script src="scr/script.js"></script> -->
+</body>
+</html>
