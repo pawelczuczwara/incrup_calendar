@@ -1,4 +1,4 @@
-# Portfolio-website
+# Incrup Calendar
 Responsive portfolio HTML CSS JavaScript website
 
 - Object oriented programming pattern,
