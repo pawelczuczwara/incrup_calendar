@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+
+    "name": "Incrup Calendar",
+    "version": "1.0",
+    "description": "Google Cloud Support Incrup Calendar Chrome exension",
+    "author": "Pawel Czuczwara",
+    
+    "permissions":["storage","declarativeContent"],
+    //"page_action": {
+    //    "default_popup": "index.html"
+    //  },
+    "browser_action": {
+        "default_icon": {
+           "32": "./img/Udacity_logo.png" // Chrome supports various icon sizes (in pixels)
+         },
+         "default_title": "Open Incrup Calendar", // The title that shows up when a user hovers on your icon
+         "default_popup": "./index.html" // The URL of your popup page
+    },
+    "background": {
+        "scripts": ["./scr/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+            {
+            "matches": ["*"],
+            "js": [".scr/script.js"]
+            }
+        ]
+
+    
+}
