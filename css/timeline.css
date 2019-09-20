@@ -4,8 +4,8 @@
     --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
   
     position: relative;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
   .timeline:before{
@@ -23,11 +23,11 @@
   }
   
   .timeline__group:not(:first-of-type){
-    margin-top: 4rem;
+    margin-top: 0.25rem;
   }
   
   .timeline__year{
-    padding: .5rem 1.5rem;
+    padding: .8rem 1.5rem;
     color: var(--uiTimelineSecondaryColor);
     background-color: var(--uiTimelineMainColor);
   
@@ -41,7 +41,7 @@
   }
   
   .timeline__box:not(:last-of-type){
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   
   .timeline__box:before{
@@ -56,7 +56,7 @@
   }
   
   .timeline__date{
-    min-width: 65px;
+    min-width: 35px;
     position: absolute;
     left: 0;
   
@@ -82,8 +82,8 @@
   }
   
   .timeline__post{
-    padding: 1.5rem 2rem;
-    border-radius: 2px;
+    padding: 0.25rem;
+    border-radius: 0px;
     border-left: 3px solid var(--uiTimelineMainColor);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
     background-color: var(--uiTimelineSecondaryColor);
@@ -100,7 +100,7 @@
     }
   
     .timeline__box{
-      padding-left: 80px;
+      padding-left: 70px;
     }
   
     .timeline__box:before{
@@ -126,11 +126,11 @@
   
     .timeline__box{
       padding-left: 20px;
-      padding-top: 70px;
+      padding-top: 20px;
     }
   
     .timeline__box:before{
-      top: 90px;
+      top: 65px;
     }    
   
     .timeline__date{
@@ -140,7 +140,7 @@
   
   .timeline{
     --timelineMainColor: #7d97ad;
-    font-size: 16px;
+    font-size: 14px;
   }
   
   /*
@@ -179,80 +179,12 @@
   
   p{
     margin-top: 0;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+    line-height: 1;
   }
   
   p:last-child{
     margin-bottom: 0;
   }
   
-  .page{
-    max-width: 800px;
-    padding: 10rem 2rem 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    order: 1;
-  }
   
-  /* 
-  Patreon
-  */
-  
-  .r-link{
-    --uirLinkDisplay: var(--rLinkDisplay, inline-flex);
-    --uirLinkTextColor: var(--rLinkTextColor);
-    --uirLinkTextDecoration: var(--rLinkTextDecoration, none);
-    display: var(--uirLinkDisplay) !important;
-    color: var(--uirLinkTextColor) !important;
-    text-decoration: var(--uirLinkTextDecoration) !important;
-  }
-  
-  .patreon{
-    padding-top: 15px;
-    padding-bottom: 20px;
-    background-color: #fff;
-  }
-  
-  .patreon__container{
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .patreon__msg{
-    display: block;
-  }
-  
-  .patreon__link{
-    --rLinkTextColor: #fff;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 700;
-    background-color: #ff6262;
-    border-radius: 25px;
-    justify-content: center;
-  }
-  
-  @media (max-width: 640px){
-    
-    .patreon__link{
-      margin-top: 12px;
-    }
-  }
-  
-  @media (min-width: 641px){
-    
-    .patreon__container{
-      display: flex;
-      align-items: center;
-    }
-    
-    .patreon__link{
-      flex: none;
-      margin-left: 25px;
-    }
-  }
