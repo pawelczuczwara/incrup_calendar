@@ -6,7 +6,7 @@
     "description": "Google Cloud Support Incrup Calendar Chrome exension",
     "author": "Pawel Czuczwara",
     
-    "permissions":["storage","declarativeContent"],
+    "permissions":["activeTab", "storage","declarativeContent"],
     //"page_action": {
     //    "default_popup": "index.html"
     //  },
@@ -21,12 +21,7 @@
         "scripts": ["./scr/background.js"],
         "persistent": false
     },
-    "content_scripts": [
-            {
-            "matches": ["*"],
-            "js": [".scr/script.js"]
-            }
-        ]
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 
     
 }

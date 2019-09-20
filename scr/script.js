@@ -140,6 +140,7 @@ function textClick(element) {
 window.addEventListener('resize', () => startSize());
 
 function init() {
+    console.log("init01");
     //remove please wait message.
     const wait_node = document.querySelector('.wait');
     wait_node.parentNode.removeChild(wait_node);
@@ -165,5 +166,5 @@ function init() {
     });
 
 };
-init();
+//init();
 
