@@ -1,10 +1,14 @@
 # Incrup Calendar
 Google Chrome Extension
-Responsive portfolio HTML CSS JavaScript website
+
+HTML CSS JavaScript extension
 
 - Object oriented programming pattern,
 - Handlebars template based content,
-- JavaScript promises driven loader
 
-Google Chrome Webstore
+# How to use
+Klick on the text to copy to clipboard
+
+# How to install
+Install from Google Chrome Webstore
 https://chrome.google.com/webstore/detail/hdocccambbmmdmgimpepahkcofcopccf
