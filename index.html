@@ -6,7 +6,7 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
-    <!--  <link rel="stylesheet" href="css/style.css">  -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/timeline.css">
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script> -->
@@ -15,6 +15,7 @@
 <div class="container">
     <main>
         <!-- Projects section -->
+        <span id="toast_info" class="toast toast_hidden">Text copied</span>
         <div class="page_t">
             <div class="timeline">
                 <div class="timeline__group">
@@ -33,13 +34,10 @@
                         </div>
                         <div class="timeline__post">
                             <div class="timeline__content">
-                                <span id="i{{date_plus}}" class="t1">Incrup in {{date_plus}} {{date_plus_days}}, on: {{date_full}} before 19:00 CET</span>
-                                <button class="b1" >Copy</button>
                                 <span id="is{{date_plus}}" class="t1">INCRUP: {{date_short}}</span>
-                                <hr>
-                                <span id="c{{date_plus}}" class="t1">Planning to close the case in {{date_plus}} {{date_plus_days}}, on: {{date_full}}</span>
-                                <button class="b1" >Copy</button>
+                                <span id="i{{date_plus}}" class="t1">Incrup in {{date_plus}} {{date_plus_days}}, on: {{date_full}} before 19:00 CET</span>
                                 <span id="cs{{date_plus}}" class="t1">CLOSE: {{date_short}}</span>
+                                <span id="c{{date_plus}}" class="t1">Planning to close the case in {{date_plus}} {{date_plus_days}}, on: {{date_full}}</span>
                             </div>
                         </div>
                     </div>
@@ -48,23 +46,18 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="section">
-            <p class='wait'>Page is loading. Plase wait.</p>
-        </div>
-
     </main>
     <footer class="footer">
         <!-- Footer and XXX:XXX for javascript -->
-        <p><span class='view__size'>XXX:XXX</span><span id="about">, author: Pawel Czuczwara</span></p>
+        <!-- <span class='view__size'>XXX:XXX</span> -->
+        <p><span id="about">author: Pawel Czuczwara</span></p>
         <!--  <img class="footer__img" src="img/p_mua.jpg" alt="Mua">
         <p class="footer__about">... ...</p>-->
     </footer>
 </div>
-<script src="./scr/loader.js"></script> 
-<!-- <script src="./scr/handlebars-v4.2.0.js"></script> -->
+<!-- <script src="./scr/loader.js"></script> -->
+<script src="./scr/handlebars-v4.2.0.js"></script>
 <!-- <script src="./scr/content.js"></script> -->
-<!-- <script src="./scr/script.js"></script> -->
+<script src="./scr/script.js"></script>
 </body>
 </html>

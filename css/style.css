@@ -1,11 +1,11 @@
 :root {
     --blue: #02b3e4;
-    --grey: #7d97ad;
+    --grey: #88a3b9;
     --black: #2d3c49;
-    --deep: #2b2b2b;
+    --deep: #444343;
 }
 
-body,
+
 html {
     margin: 0;
     padding: 0;
@@ -13,67 +13,68 @@ html {
     height: 100%;
 }
 body {
-    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+
     width:780px; 
     height:580px;
+    background-color: var(--deep) !important;
+
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    font-size: 1.6rem;
 }
 
-p,
-h1,
-h2,
-a {
-  font-family: 'Sorts Mill Goudy', serif;
-  color: white;
+.container {
+    padding: 10px;
 }
 
-/* ----- footer ----- */
+.toast {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    padding: 10px;
+    display: block;
+    background: var(--grey);
+    border-radius: 2px;
+
+    transition: .25s ease;
+}
+.toast_hidden {
+    visibility: hidden;
+    background: var(--deep);
+    color: var(--deep);
+} 
+
+.timeline__content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 10px;
+    padding: 5px;
+    grid-gap: 5px;
+    justify-content: center;
+    align-content: center;
+}
+
+.t1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--grey);
+    text-align: center;
+    box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.20);
+    transition: .25s ease;
+    border-radius: 2px;
+}
+
+.t1:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.20);
+}
+
 .footer {
     display: inline-block;
+    color: white;
     width: 100%;
-    border-top: 2px dashed var(--blue);
-}
-
-.footer__img {
-    width: 30%;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 5px;
-}
-
-.footer__about {
-    max-width: 700px;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-
-
-
-
-.b1 {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background-color:transparent;
-	-moz-border-radius:16px;
-	-webkit-border-radius:16px;
-	border-radius:16px;
-	border:0px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-    text-shadow:0px 0px 0px #ffffff;
-    align: right;
-}
-.b1:hover {
-	background-color:transparent;
-}
-.b1:active {
-	position:relative;
-	top:1px;
+    border-top: 3px dashed var(--grey);
+    font-size: 1.2rem;
 }

@@ -1,8 +1,6 @@
 'use strict'
 
-const navButton = document.querySelector('.header__button');
-const navMenu = document.querySelector('.nav');
-const viewSize = document.querySelector('.view__size');
+const toastInfo = document.querySelector('#toast_info');
 
 class CreateContent
 {
@@ -35,28 +33,8 @@ class CreateContent
 
 }
 
-// Provides information about window size
-function startSize() {
-    let viewX,
-        viewY,
-        sizing,
-        viewW;
-
-    viewY = window.innerHeight;
-    viewX = window.innerWidth;
-
-    if (viewX > 400) {
-        sizing = 'px';
-        viewW = 'window size ';
-    } else {
-        sizing = '';
-        viewW = '';
-    }
-    viewSize.innerHTML = viewW + viewX + sizing + ' : ' + viewY + sizing;
-}
-
 var timeToday = () => {
-    var options = {
+    const options = {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -68,14 +46,14 @@ var timeToday = () => {
 console.log(timeToday())
 // creates dates array of objects for template
 const timeFrom = (X) => {
-    var dates = [];
-    var options_long = {
+    let dates = [];
+    const options_long = {
         year: "numeric",
         month: "long",
         day: "numeric",
         weekday: "short"
     };
-    let options_short = {
+    const options_short = {
         year: "numeric",
         month: "numeric",
         day: "numeric",
@@ -122,6 +100,13 @@ function CopyToClipboard(containerid) {
         window.getSelection().addRange(range);
         document.execCommand("copy");
     }
+    // window.close();
+    toastInfo.classList.remove('toast_hidden');
+
+    setTimeout(function(){ 
+        toastInfo.classList.add('toast_hidden');
+        window.getSelection().removeAllRanges();
+    }, 2000);
 }
 
 function buttonClick(element) {
@@ -132,27 +117,15 @@ function textClick(element) {
     CopyToClipboard(element.toElement.id);
 }
 
-// Opens nav menu class and rotates button
-//navButton.addEventListener('click', () => {
-//    navMenu.classList.toggle('open');
-//   navButton.classList.toggle('button_rotate');
-//});
-window.addEventListener('resize', () => startSize());
 
 function init() {
     console.log("init01");
-    //remove please wait message.
-    const wait_node = document.querySelector('.wait');
-    wait_node.parentNode.removeChild(wait_node);
-
-    //const menu      = new CreateContent(menuData,     '.menu_template',    '.nav__list');
     const today     = new CreateContent(timeToday(),  '.today_template',   '.timeline_year_put');
     const day_prj   = new CreateContent(timeFrom(-7), '.day_template',     '.timeline_put');
 
     //menu   .createHTML();
     today  .createHTML();
     day_prj.createHTML();
-             startSize();    
     
     //add event listeners to copy texts
     const daysButtons = document.getElementsByClassName('b1');
@@ -166,5 +139,5 @@ function init() {
     });
 
 };
-//init();
+init();
 
